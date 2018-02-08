@@ -1,0 +1,6 @@
+com\shoppingbackend\test\SupplierTestCase.class
+com\shoppingbackend\test\CartLineTestCase.class
+com\shoppingbackend\test\CategoryTestCase.class
+com\shoppingbackend\AppTest.class
+com\shoppingbackend\test\ProductTestCase.class
+com\shoppingbackend\test\UserTestCase.class
