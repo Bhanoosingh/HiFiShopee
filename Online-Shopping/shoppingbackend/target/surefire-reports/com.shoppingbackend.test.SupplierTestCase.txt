@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.shoppingbackend.test.SupplierTestCase
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 2.564 sec
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 2.686 sec

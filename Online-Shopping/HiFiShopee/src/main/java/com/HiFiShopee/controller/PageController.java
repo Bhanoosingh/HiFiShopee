@@ -81,7 +81,8 @@ public class PageController {
 		
 		//passing the list of categories
 		mv.addObject("categories", categoryDAO.list());
-		
+		//Adding list of all Active products
+		mv.addObject("productList", productDAO.listActiveProducts());
 		mv.addObject("userClickAllProducts",true);
 		return mv;				
 	}	
@@ -103,9 +104,13 @@ public class PageController {
 		// passing the single category object
 		mv.addObject("category", category);
 		
+		//Adding list of products by category id
+		mv.addObject("productList", productDAO.listActiveProductsByCategory(id));
 		mv.addObject("userClickCategoryProducts",true);
 		return mv;				
 	}	
+	
+	
 	
 	
 	/*
@@ -128,7 +133,7 @@ public class PageController {
 		
 		mv.addObject("title", product.getName());
 		mv.addObject("product", product);
-		
+		mv.addObject("product", productDAO.get(id));
 		mv.addObject("userClickShowProduct", true);
 		
 		

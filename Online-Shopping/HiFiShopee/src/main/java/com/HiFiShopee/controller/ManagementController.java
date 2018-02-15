@@ -67,6 +67,8 @@ public class ManagementController {
 		return mv;
 		
 	}
+	
+
 
 	
 	@RequestMapping("/{id}/product")
@@ -121,6 +123,7 @@ public class ManagementController {
 		
 		return "redirect:/manage/product?success=product";
 	}
+	
 
 	
 	@RequestMapping(value = "/product/{id}/activation", method=RequestMethod.GET)

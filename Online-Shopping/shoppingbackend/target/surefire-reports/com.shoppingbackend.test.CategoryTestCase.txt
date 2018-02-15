@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.shoppingbackend.test.CategoryTestCase
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 10.908 sec
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 16.329 sec

@@ -21,7 +21,7 @@ $(function() {
 	
 	
 	// solving the active menu problem
-	switch (menu) {
+/*	switch (menu) {
 
 	case 'About Us':
 		$('#about').addClass('active');
@@ -45,13 +45,13 @@ $(function() {
 		$('#a_' + menu).addClass('active');
 		break;
 	}
-
+*/
 	// code for jquery dataTable
 	var $table = $('#productListTable');
 
 	// execute the below code only where we have this table
 	if ($table.length) {
-		// console.log('Inside the table!');
+		console.log('Inside the table!');
 
 		var jsonUrl = '';
 		if (window.categoryId == '') {
