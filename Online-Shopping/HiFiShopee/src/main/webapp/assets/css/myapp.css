@@ -1,15 +1,10 @@
-/*!
- * Start Bootstrap - Shop Homepage (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
 html {
+	
 	height:100%;
 }
 
 body {
-    padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	padding-top:70px;
     height:100%;
 }
 
@@ -70,23 +65,23 @@ footer {
 
 
 .content {
-	padding-bottom: 60px; /*height of the footer*/	
+	padding-bottom: 40px; /*height of the footer*/	
 }
 
 
 .footer {
 	width:100%;
 	position:absolute;
-	bottom:20px;
-	height: 60px;
+	bottom:0px;
+	height: 20px;
 	
 }
 
 
 .dataTableImg {
 	
-	width:100px;
-	height: 100px;
+	width:100%;
+	
 	
 }
 
@@ -236,6 +231,6 @@ input:checked + .slider:before {
 		width:98%;
 		height:100%;
 		z-index:9999;
-		background:url(../images/pre-loader.gif) 50% no-repeat #fff
+		background:url(../images/loader.gif) 50% no-repeat #fff
 }
 
