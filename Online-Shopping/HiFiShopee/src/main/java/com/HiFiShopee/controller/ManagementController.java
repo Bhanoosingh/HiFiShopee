@@ -23,8 +23,10 @@ import com.HiFiShopee.util.FileUtil;
 import com.HiFiShopee.validator.ProductValidator;
 import com.shoppingbackend.dao.CategoryDAO;
 import com.shoppingbackend.dao.ProductDAO;
+import com.shoppingbackend.dao.SupplierDAO;
 import com.shoppingbackend.model.Category;
 import com.shoppingbackend.model.Product;
+import com.shoppingbackend.model.Supplier;
 
 @Controller
 @RequestMapping("/manage")
@@ -36,7 +38,10 @@ public class ManagementController {
 	private ProductDAO productDAO;
 	
 	@Autowired
-	private CategoryDAO categoryDAO;		
+	private CategoryDAO categoryDAO;
+	
+	@Autowired
+	private SupplierDAO supplierDAO;
 
 	@RequestMapping("/product")
 	public ModelAndView manageProduct(@RequestParam(name="success",required=false)String success) {		
@@ -49,7 +54,7 @@ public class ManagementController {
 		
 		// assuming that the user is ADMIN
 		// later we will fixed it based on user is SUPPLIER or ADMIN
-		nProduct.setSupplierId(1);
+		/*nProduct.setSupplierId(1);*/
 		nProduct.setActive(true);
 
 		mv.addObject("product", nProduct);
@@ -142,7 +147,12 @@ public class ManagementController {
 		categoryDAO.add(mCategory);		
 		return "redirect:" + request.getHeader("Referer") + "?success=category";
 	}
-			
+	
+	@RequestMapping(value = "/supplier", method=RequestMethod.POST)
+	public String managePostSupplier(@ModelAttribute("supplier") Supplier supplier, HttpServletRequest request) {					
+		supplierDAO.insertSupp(supplier);		
+		return "redirect:" + request.getHeader("Referer") + "?success=supplier";
+	}
 	
 	
 	@ModelAttribute("categories") 
@@ -153,6 +163,17 @@ public class ManagementController {
 	@ModelAttribute("category")
 	public Category modelCategory() {
 		return new Category();
+	}
+	
+	
+	@ModelAttribute("suppliers") 
+	public List<Supplier> modelSuppliers() {
+		return supplierDAO.list();
+	}
+	
+	@ModelAttribute("supplier")
+	public Supplier modelSupplier() {
+		return new Supplier();
 	}
 	
 	

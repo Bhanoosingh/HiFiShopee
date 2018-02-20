@@ -1,5 +1,7 @@
 package com.shoppingbackend.dao;
 
+import java.util.List;
+
 import com.shoppingbackend.model.Supplier;
 
 public interface SupplierDAO {
@@ -9,5 +11,7 @@ public interface SupplierDAO {
 	
 	//To select single supplier by id
 	public Supplier getSupplierById(int sid);
+	
+	public List<Supplier> list();
 
 }
