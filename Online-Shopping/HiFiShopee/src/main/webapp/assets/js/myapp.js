@@ -314,11 +314,41 @@ $(function() {
 				},
 				messages: {					
 					name: {
-						required: 'Please enter product name!',
+						required: 'Please enter Category name!',
 						minlength: 'Please enter atleast five characters'
 					},
 					description: {
-						required: 'Please enter product name!',
+						required: 'Please enter Category name!',
+						minlength: 'Please enter atleast five characters'
+					}					
+				},
+				errorElement : "em",
+				errorPlacement : function(error, element) {
+					errorPlacement(error, element);
+				}				
+			}
+		
+		);
+		
+	}
+	
+	
+	
+	
+$supplierForm = $('#supplierForm');
+	
+	if($supplierForm.length) {
+		
+		$supplierForm.validate({			
+				rules: {
+					name: {
+						required: true,
+						minlength: 3
+					}				
+				},
+				messages: {					
+					name: {
+						required: 'Please enter Supplier name!',
 						minlength: 'Please enter atleast five characters'
 					}					
 				},

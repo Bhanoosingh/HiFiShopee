@@ -93,7 +93,7 @@
 									<sf:hidden path="code" />
 									<sf:hidden path="supplierId" />
 									<sf:hidden path="active" />
-									<button type="button" class="btn btn-warning btn-xs"
+									<button type="button" class="btn btn-warning btn-sm"
 										data-toggle="modal" data-target="#myCategoryModal">Add
 										New Category</button>
 								</div>
@@ -103,7 +103,7 @@
 						<div class="form-group">
 							<label class="control-label col-md-4">Supplier</label>
 							<div class="col-md-8">
-								<sf:select path="id" items="${suppliers}"
+								<sf:select path="supplierId" items="${suppliers}"
 									itemLabel="supplierName" itemValue="sid" class="form-control" />
 
 								<div class="text-right">

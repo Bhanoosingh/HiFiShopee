@@ -78,17 +78,11 @@
 								</div>
 							</div>
 							
-	<div class="form-group">
-		<label class="control-label col-md-4">Select Role</label>
-		<div class="col-md-8">
-			<label class="radio-inline">
-				<sf:radiobutton path="role" value="USER" checked="checked"/> User 				
-			</label>
-			<label class="radio-inline">
-				<sf:radiobutton path="role" value="SUPPLIER"/> Supplier
-			</label>
-		</div>
-	</div>							
+							<sf:hidden path="role" value="USER"/>
+			
+			
+		
+						
 
 							<div class="form-group">
 								<div class="col-md-offset-4 col-md-8">
