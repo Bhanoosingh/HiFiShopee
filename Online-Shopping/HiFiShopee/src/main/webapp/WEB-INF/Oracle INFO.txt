@@ -1,0 +1,2 @@
+DataBase name:- Oracle
+Administrator Password :- Oracle123
